@@ -117,7 +117,13 @@ h1 span { color: var(--teal-dark); }
 .particle-container { position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 50%; max-width: 650px; aspect-ratio: 1/1; margin: 0; z-index: 1;}
 #particleCanvas { width: 100%; height: 100%; display: block; cursor: crosshair;}
 
-/* Imagens Flutuantes (Geral) - IMPORTANTE: z-index 0 e pointer-events none para não bugar o texto! */
+.showcase-panel { padding: 40px; border-radius: var(--radius-xl); position: relative; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.02);}
+.floating-badge { position: absolute; background: rgba(255,255,255,0.9); color: var(--teal-dark); padding: 12px 20px; border-radius: var(--radius-lg); font-weight: 700; font-size: 0.95rem; box-shadow: 0 15px 30px rgba(0,0,0,0.15); display: flex; align-items: center; gap: 8px; animation: float1 5s ease-in-out infinite; z-index: 20;}
+.floating-badge svg { width: 18px; height: 18px; color: var(--teal-light);}
+.badge-top-right { top: 20px; right: -20px; animation-delay: 1s;}
+.badge-bottom-left { bottom: 30px; left: -30px; animation-delay: 2s;}
+
+/* Imagens Flutuantes (Geral) - Z-Index Fundo */
 .parallax-wrapper { position: absolute; z-index: 0; pointer-events: none; }
 .floating-img { width: 100%; height: auto; max-width: 100%; }
 .shadow-deep { filter: drop-shadow(0 30px 50px rgba(0,0,0,0.2)); }
@@ -160,7 +166,7 @@ h1 span { color: var(--teal-dark); }
 .about-main-img { width: 85%; height: 100%; object-fit: cover; border-radius: var(--radius-lg); z-index: 2; position: relative;}
 .about-decorator { position: absolute; top: 0; right: 0; width: 90%; height: 90%; border: 2px dashed var(--teal-light); border-radius: var(--radius-lg); z-index: 1; transform: translate(15px, -15px);}
 
-/* --- BENTO GRID CORRIGIDO --- */
+/* --- BENTO GRID --- */
 .value-prop { position: relative; background-color: var(--grey-dark); overflow: hidden; }
 .value-bg-shape { position: absolute; top: -10%; left: -10%; width: 700px; height: 700px; background: var(--teal-dark); border-radius: 50%; filter: blur(150px); opacity: 0.3; z-index: 0; pointer-events: none;}
 .value-container { position: relative; z-index: 1; }
@@ -168,7 +174,7 @@ h1 span { color: var(--teal-dark); }
 .bento-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; max-width: 1000px; margin: 0 auto; }
 .bento-item { position: relative; border-radius: var(--radius-lg); overflow: hidden; transition: transform 0.4s ease; padding: 2px; height: 100%; min-height: 240px;}
 
-/* Configurações Matemáticas das Colunas (Soma = 12) */
+/* Configurações Matemáticas das Colunas para Desktop (Soma = 12) */
 #home-bento .bento-large { grid-column: span 8; }
 #home-bento .bento-small-1 { grid-column: span 4; }
 #home-bento .bento-small-2 { grid-column: span 4; }
@@ -244,7 +250,7 @@ h1 span { color: var(--teal-dark); }
 .comparison-table th, .comparison-table td { padding: 24px 20px; border-bottom: 1px solid rgba(0,0,0,0.05); background: var(--white); }
 .equip-table th, .equip-table td { padding: 16px 20px; font-size: 0.95rem; }
 .comparison-table tbody tr:last-child td { border-bottom: none; }
-.equip-table .table-section-header td { padding: 12px 20px; font-size: 1.05rem; letter-spacing: 0.5px; text-transform: uppercase; }
+.equip-table .table-section-header td { padding: 12px 20px; font-size: 1.05rem; letter-spacing: 0.5px; text-transform: uppercase; background: var(--gray-light); color: var(--teal-dark); font-weight: 800;}
 
 .comparison-table th { font-size: 1.1rem; color: var(--grey-dark); font-weight: 700; border-bottom: 2px solid rgba(0,0,0,0.1); background: var(--gray-light);}
 .comparison-table th.bg-teal-header { background: var(--teal-dark); color: var(--white); border-bottom-color: var(--teal-dark); }
@@ -272,7 +278,7 @@ h1 span { color: var(--teal-dark); }
 
 /* --- BANNER PARALLAX FIXO --- */
 .banner-compra { position: relative; min-height: 400px; display: flex; align-items: center; justify-content: center; background-color: var(--grey-dark); }
-.banner-compra .parallax-bg { position: absolute; inset: 0; background-image: url('87.jpeg'); background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; z-index: 0; }
+.banner-compra .parallax-bg { position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; z-index: 0; }
 .banner-compra .overlay-escuro { position: absolute; inset: 0; background: rgba(15, 23, 42, 0.85); z-index: 1; }
 
 /* --- SETORES SCROLL STICKY & TECH BACKGROUND --- */
@@ -331,10 +337,9 @@ h1 span { color: var(--teal-dark); }
    ========================================================================= */
 @media (max-width: 990px) {
     .bento-grid { grid-template-columns: repeat(12, 1fr); }
-    /* Grid Override Tablet */
+    /* Grid Override Tablet - Força 100% de largura para todos os itens do Bento se não couberem na tela */
     #home-bento .bento-large, #home-bento .bento-wide, #home-bento .bento-small-1, #home-bento .bento-small-2,
-    #sobre-bento .bento-small-1, #sobre-bento .bento-small-2,
-    #equipamentos .bento-small-1 { grid-column: span 12; }
+    #sobre-bento .bento-small-1, #sobre-bento .bento-small-2 { grid-column: span 12; }
     
     .sectors-sticky-layout { flex-direction: column; gap: 40px; }
     .sticky-sidebar { position: static; text-align: center; }
@@ -345,7 +350,8 @@ h1 span { color: var(--teal-dark); }
     .hero-internal-dark .grid-2 { display: flex; flex-direction: column; text-align: center; }
     .text-left-desktop { text-align: center; }
     .hero-ctas.justify-start { justify-content: center !important;}
-    .particle-container { position: relative; margin-top: 40px; right: 0; transform: none; max-width: 100%;}
+    
+    .particle-container { max-width: 100%; margin-top: 40px; }
     .banner-compra .parallax-bg { background-attachment: scroll; } 
 }
 
@@ -400,7 +406,7 @@ h1 span { color: var(--teal-dark); }
     .dropdown-menu a { padding: 12px 20px; text-align: center; display: block; width: 100%;}
     .dropdown-menu a:hover { padding-left: 20px; background: rgba(0,0,0,0.05); }
 
-    /* Imagens Flutuantes Mobile ESPALHADAS e como Fundo (z-index 0) */
+    /* Imagens Flutuantes Mobile ESPALHADAS (Home e Equipamentos) */
     .wrap-a { width: clamp(120px, 25vw, 180px); top: 10%; left: 8%; transform: rotate(-15deg); }
     .wrap-b { width: clamp(90px, 20vw, 140px); top: 22%; right: 5%; transform: rotate(10deg); }
     .wrap-c { width: clamp(160px, 35vw, 240px); bottom: 10%; left: 5%; transform: rotate(20deg); }
@@ -413,15 +419,10 @@ h1 span { color: var(--teal-dark); }
     .hero-text h1 { font-size: 2.5rem; }
     .about-image-wrapper { height: auto; }
 
-    /* PARALLAX PARTICLES MOBILE (FUNDO INTEIRO) */
-    .particle-container { position: absolute; inset: 0; width: 100%; height: 100%; max-width: 100%; margin: 0; opacity: 0.6; z-index: 0; pointer-events: none;}
-
-    /* Bento Grid Mobile */
+    /* Bento Grid Mobile (Removido o efeito torto/escadinha) */
     .bento-grid { gap: 20px; display: flex; flex-direction: column;}
-    .bento-item { margin-bottom: 10px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);}
-    .bento-grid > div:nth-child(even) { transform: translateX(10px); }
-    .bento-grid > div:nth-child(odd) { transform: translateX(-10px); }
-    .bento-grid > div:hover { transform: translateY(-5px); }
+    .bento-item { margin-bottom: 10px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); transition: transform 0.3s ease;}
+    .bento-item:hover { transform: translateY(-5px); }
     .bento-content { padding: 24px; }
     .bento-item h3 { font-size: 1.2rem; }
     .flex-row { flex-direction: column; align-items: flex-start; gap: 16px; text-align: left;}
@@ -438,7 +439,7 @@ h1 span { color: var(--teal-dark); }
     .comparison-table th { font-size: 0.7rem !important; }
     .comparison-table .table-sub { display: none;} 
     
-    /* Regra para Tabela Equipamentos Mobile */
+    /* Regra para Tabela Equipamentos Mobile (Texto Quebra Linha) */
     .equip-table th, .equip-table td { font-size: 0.85rem !important; white-space: normal !important; }
     .equip-table .table-section-header td { font-size: 0.9rem !important; }
     .equip-text-spacing { margin-bottom: 50px; }
