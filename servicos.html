@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .servicos-showcase-container {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            z-index: 10;
+        }
+        .servicos-glass-panel {
+            padding: 40px; 
+            border-radius: 32px; 
+            position: relative; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            border: 1px solid rgba(255,255,255,0.2); 
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 30px 50px rgba(0,0,0,0.2);
+        }
+        .servicos-main-img {
+            width: 90%;
+            height: auto;
+            animation: s-float 6s ease-in-out infinite;
+        }
+        .servicos-badge {
+            position: absolute; 
+            background: rgba(255,255,255,0.95); 
+            color: var(--teal-dark); 
+            padding: 12px 20px; 
+            border-radius: 20px; 
+            font-weight: 700; 
+            font-size: 0.95rem; 
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15); 
+            display: flex; 
+            align-items: center; 
+            gap: 8px;
+            z-index: 20;
+            pointer-events: auto;
+        }
+        .servicos-badge svg {
+            width: 18px; height: 18px; color: var(--teal-light);
+        }
+        .s-badge-1 { top: 20px; right: -30px; animation: s-float 5s ease-in-out infinite 1s; }
+        .s-badge-2 { bottom: 30px; left: -30px; animation: s-float 7s ease-in-out infinite 2s; }
+
+        @keyframes s-float { 
+            0%, 100% { transform: translateY(0); } 
+            50% { transform: translateY(-15px); } 
+        }
+
+        /* Ajuste perfeito e contido para o ecrã do telemóvel */
+        @media (max-width: 768px) {
+            .servicos-showcase-container { max-width: 280px; margin-top: 40px; }
+            .servicos-glass-panel { padding: 20px; border-radius: 20px; }
+            .servicos-badge { font-size: 0.8rem; padding: 8px 12px; border-radius: 12px; }
+            /* Puxa as etiquetas para dentro do painel para não criar barra de rolagem */
+            .s-badge-1 { top: -15px; right: 10px; }
+            .s-badge-2 { bottom: -15px; left: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar-wrapper">
+        <div class="navbar" id="main-nav">
+            <div class="logo">
+                <a href="index.html"><img src="Separi-logo1.png" alt="Separi Logo"></a>
+            </div>
+            
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="sobre.html" class="nav-item">Sobre</a>
+                
+                <div class="dropdown">
+                    <div class="nav-item dropdown-toggle" style="color: var(--teal-dark);">
+                        <a href="servicos.html">Serviços</a>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="caret"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="servicos.html#preventiva">Manutenção Preventiva</a>
+                        <a href="servicos.html#revisao">Revisão Geral</a>
+                        <a href="servicos.html#campo-oficina">Campo & Oficina</a>
+                        <a href="servicos.html#emergencia">Emergência 24/7</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <div class="nav-item dropdown-toggle">
+                        <a href="equipamentos.html#pecas">Peças</a>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="caret"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="equipamentos.html#pecas">Alfa Laval</a>
+                        <a href="equipamentos.html#pecas">GEA Westfalia</a>
+                        <a href="equipamentos.html#pecas">Tetra Pak</a>
+                        <a href="equipamentos.html#pecas">Seital</a>
+                    </div>
+                </div>
+                
+                <div class="dropdown">
+                    <div class="nav-item dropdown-toggle">
+                        <a href="equipamentos.html">Equipamentos</a>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="caret"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="equipamentos.html#recondicionados">Recondicionados</a>
+                        <a href="equipamentos.html#locacao">Locação de Bowls</a>
+                        <a href="equipamentos.html#automacao">Automação</a>
+                    </div>
+                </div>
+
+                <a href="https://wa.me/551938167640" target="_blank" class="btn btn-primary btn-sm mobile-only-btn">Fale Conosco</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="https://wa.me/551938167640" target="_blank" class="btn btn-primary btn-sm desktop-only-btn">Fale Conosco</a>
+            </div>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-internal-dark relative-section">
+        <div class="sectors-bg-pattern" style="opacity: 0.05;"></div>
+        <div class="tech-orb tech-orb-1" style="background: var(--teal-light); opacity: 0.15; width: 500px; height: 500px; top: -100px; left: -100px;"></div>
+        
+        <div class="container grid-2 align-center relative-z" style="position: relative; z-index: 10;">
+            <div class="hero-internal-text reveal text-left-desktop">
+                <div class="breadcrumbs mb-20">
+                    <a href="index.html">Home</a> <span class="separator">/</span> <span class="current">Serviços</span>
+                </div>
+                <h1 class="text-white">Cuidado <span style="color: var(--teal-light);">Total</span><br>com o seu equipamento.</h1>
+                <p class="text-white-muted text-lg mt-20 mb-30 max-width-text-left">Oferecemos cobertura completa de serviços para centrífugas e separadores industriais e marinhos. Da manutenção preventiva ao atendimento emergencial, a nossa prioridade é o seu processo.</p>
+                <div class="hero-ctas justify-start">
+                    <a href="https://wa.me/551938167640" target="_blank" class="btn btn-primary shadow-glow w-100-mobile">Agendar Avaliação</a>
+                </div>
+            </div>
+            
+            <div class="hero-internal-visual reveal" style="transition-delay: 0.2s;">
+                <div class="servicos-showcase-container">
+                    <div class="servicos-glass-panel">
+                       <img src="3.png" alt="Rotor Separi" class="servicos-main-img">
+                       <div class="servicos-badge s-badge-1">
+                           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                           Engenharia de Precisão
+                       </div>
+                       <div class="servicos-badge s-badge-2">
+                           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                           Suporte 24/7
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="preventiva" class="section-padding bg-gray-light">
+        <div class="container grid-2 align-center reveal gap-60">
+            <div class="image-block proportion-box border-dark shadow-deep">
+                <div class="placeholder-art" style="background: linear-gradient(135deg, #d1fae5, #ecfdf5);">
+                    <img src="16.jpg.jpeg" alt="" width="140%">
+                </div>
+            </div>
+            <div class="text-block">
+                <h2 class="section-title">Manutenção Preventiva <span style="font-size: 1.2rem; color: var(--text-light); font-weight: 500; display: block; margin-top: 5px;">Minor Service</span></h2>
+                <p class="text-lg mt-20">A manutenção preventiva é a forma mais eficaz de evitar problemas inesperados e proteger o desempenho a longo prazo do seu separador.</p>
+                <p class="text-lg mt-20 mb-30">Realizamos inspeções regulares e verificações baseadas na condição operacional. A nossa equipa orienta os seus operadores sobre como limpar adequadamente e identificar desgaste.</p>
+                
+                <div class="checklist">
+                    <p><svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Inspeção do bowl, vedações e portas de entrada/saída</p>
+                    <p><svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Serviço intermediário com troca de gaxetas</p>
+                    <p><svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Lubrificação e verificação de componentes rotativos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="revisao" class="section-padding">
+        <div class="container grid-2 align-center reveal gap-60 desktop-reverse">
+            <div class="text-block">
+                <h2 class="section-title">Revisão Geral <span style="font-size: 1.2rem; color: var(--text-light); font-weight: 500; display: block; margin-top: 5px;">Major Service</span></h2>
+                <p class="text-lg mt-20">O Major Service é a revisão anual completa do seu equipamento. Inclui todos os itens do serviço preventivo, acrescidos de uma análise profunda no chassi e componentes estruturais.</p>
+                <p class="text-lg mt-20 mb-30">Isso dá-nos a oportunidade de identificar problemas futuros a curto prazo e evitar inatividade não planeada, além de permitir o planeamento de orçamentos para reparações maiores.</p>
+                
+                <div class="checklist">
+                    <p><svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Desmontagem completa e limpeza geral</p>
+                    <p><svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Verificação de rolamentos, eixos e drives</p>
+                    <p><svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Teste de desempenho (Água/Produto) e calibração</p>
+                </div>
+            </div>
+            <div class="image-block proportion-box border-dark shadow-deep">
+                <div class="placeholder-art" style="background: linear-gradient(135deg, #e0e7ff, #f0f9ff);">
+                    <img src="engenharia.jpeg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="comparativo" class="section-padding bg-gray-light">
+        <div class="container reveal">
+            <div class="text-center mb-50">
+                <h2 class="section-title">O que está incluído em cada serviço?</h2>
+                <p class="text-lg max-width-text">Compare os escopos das nossas principais intervenções técnicas.</p>
+            </div>
+
+            <div class="table-responsive-wrapper shadow-deep">
+                <div class="table-responsive">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th class="sticky-col header-corner">Escopo Técnico</th>
+                                <th>Preventiva <br><span class="table-sub">Minor Service</span></th>
+                                <th>Revisão Geral <br><span class="table-sub">Major Service</span></th>
+                                <th class="bg-teal-header">Em Oficina <br><span class="table-sub" style="color: rgba(255,255,255,0.8);">Shop Service</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="sticky-col font-semibold text-left">Inspeção do Bowl e Peças</td>
+                                <td><svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg></td>
+                                <td><svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg></td>
+                                <td><svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg></td>
+                            </tr>
+                            <tr>
+                                <td class="sticky-col font-semibold text-left">Troca de Gaxetas e Vedações</td>
+                                <td><svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg></td>
+                                <td><svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg></td>
+                                <td><svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg></td>
+                            </tr>
+                            <tr>
+                                <td class="sticky-col font-semibold text-left">Relatório Técnico Detalhado</td>
+                                <td><svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg></td>
+                                <td><svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg></td>
+                                <td><svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg></td>
+                            </tr>
+                            <tr>
+                                <td class="sticky-col font-semibold text-left">Inspeção do Chassi e Estrutura</td>
+                                <td><span class="icon-dash">-</span></td>
+                                <td><svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg></td>
+                                <td><svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg></td>
+                            </tr>
+                            <tr>
+                                <td class="sticky-col font-semibold text-left">Substituição de Rolamentos</td>
+                                <td><span class="icon-dash">-</span></td>
+                                <td><svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg></td>
+                                <td><svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg></td>
+                            </tr>
+                            <tr>
+                                <td class="sticky-col font-semibold text-left">Testes de Calibração</td>
+                                <td><span class="icon-dash">-</span></td>
+                                <td><svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg></td>
+                                <td><svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg></td>
+                            </tr>
+                            <tr>
+                                <td class="sticky-col font-semibold text-left">Balanceamento Dinâmico</td>
+                                <td><span class="icon-dash">-</span></td>
+                                <td><span class="icon-dash">-</span></td>
+                                <td><svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg></td>
+                            </tr>
+                            <tr>
+                                <td class="sticky-col font-semibold text-left">Microusinagem e Jateamento</td>
+                                <td><span class="icon-dash">-</span></td>
+                                <td><span class="icon-dash">-</span></td>
+                                <td><svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="campo-oficina" class="section-padding">
+        <div class="container reveal text-center mb-50">
+            <h2 class="section-title">Onde você precisar, quando precisar.</h2>
+            <p class="text-lg max-width-text">Estrutura completa para atender na sua fábrica ou na nossa sede de alta tecnologia.</p>
+        </div>
+        
+        <div class="container interactive-split-container reveal">
+            <div class="split-panel panel-light">
+                <div class="panel-content">
+                    <div class="icon-circle mb-20" style="background: rgba(0, 169, 157, 0.1); color: var(--teal-dark); border: none;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    </div>
+                    <h3 class="mb-20">Serviço em Campo</h3>
+                    <p class="mb-30 text-lg">A nossa equipa de engenheiros vai até ao seu navio ou instalação industrial. Garantimos o mínimo de tempo inativo resolvendo o problema diretamente no local onde ele ocorre.</p>
+                    <ul class="detailed-list">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Inspeção e diagnóstico na fábrica</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Manutenção preventiva programada</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Formação da sua equipa de operação</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="split-panel panel-dark">
+                <div class="tech-orb tech-orb-2" style="width: 300px; height: 300px; right: -50px; bottom: -50px; opacity: 0.4;"></div>
+                <div class="panel-content relative-z">
+                    <div class="icon-circle mb-20" style="background: rgba(255, 255, 255, 0.1); color: var(--white); border: 1px solid rgba(255,255,255,0.2);">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                    </div>
+                    <h3 class="mb-20 text-white">Serviço em Oficina</h3>
+                    <p class="mb-30 text-lg" style="color: rgba(255,255,255,0.7);">Para reconstruções completas, a precisão e qualidade encontram-se aqui. As nossas capacidades avançadas de reparação estrutural restauram os rigorosos padrões de fábrica.</p>
+                    <ul class="detailed-list text-white">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Balanceamento dinâmico de rotores</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Microusinagem e reparação de componentes</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Opção de locação de Bowls para não parar</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="emergencia" class="section-padding relative-section" style="background: var(--grey-dark);">
+        <div class="sectors-bg-pattern" style="opacity: 0.1;"></div>
+        <div class="tech-orb tech-orb-1" style="width: 400px; height: 400px; left: 50%; transform: translateX(-50%); top: -100px;"></div>
+        
+        <div class="container relative-z reveal text-center">
+            <div class="badge-outline text-white mb-20" style="border-color: rgba(255,255,255,0.2); background: rgba(255,255,255,0.05);">Suporte Emergencial</div>
+            <h2 class="section-title text-white">Atendimento 24 horas por dia, 7 dias por semana.</h2>
+            <p class="text-lg text-white-muted max-width-text mt-20 mb-50">Quando o seu separador para, cada minuto conta. Enviamos técnicos assim que o pedido crítico é validado. Não operamos com 100% da equipa bloqueada na agenda para garantir esta flexibilidade de o socorrer.</p>
+            
+            <a href="https://wa.me/551938167640" target="_blank" class="btn btn-primary shadow-glow w-100-mobile" style="font-size: 1.1rem; padding: 20px 40px; border-radius: 12px;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24" style="margin-right: 12px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                Falar no WhatsApp 24/7
+            </a>
+        </div>
+    </section>
+
+    <section id="beneficios" class="section-padding bg-gray-light">
+        <div class="container reveal">
+            <div class="text-center mb-50">
+                <h2 class="section-title">Que problemas evita com a Separi?</h2>
+                <p class="max-width-text text-lg">A manutenção de rotina não é um custo, é uma proteção. Veja o que prevenimos ao manter o seu equipamento rigorosamente em dia.</p>
+            </div>
+
+            <div class="grid-3 mt-50">
+                <div class="webflow-card border-hover text-center" style="padding: 30px;">
+                    <div style="color: #ef4444; margin-bottom: 16px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="40" height="40"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></div>
+                    <h4 style="font-size: 1.1rem;">Paragens Não Planeadas</h4>
+                    <p style="font-size: 0.95rem;">Perda de horas de produção valiosas por falhas que poderiam ser previstas e corrigidas antes de quebrarem.</p>
+                </div>
+                <div class="webflow-card border-hover text-center" style="padding: 30px;">
+                    <div style="color: #ef4444; margin-bottom: 16px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="40" height="40"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+                    <h4 style="font-size: 1.1rem;">Contaminação e Danos</h4>
+                    <p style="font-size: 0.95rem;">Contaminação do produto final ou danos irreversíveis aos componentes internos (rotores e eixos) do separador.</p>
+                </div>
+                <div class="webflow-card border-hover text-center" style="padding: 30px;">
+                    <div style="color: #ef4444; margin-bottom: 16px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="40" height="40"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg></div>
+                    <h4 style="font-size: 1.1rem;">Custos Exorbitantes</h4>
+                    <p style="font-size: 0.95rem;">O custo de uma reparação emergencial massiva é imensamente maior do que os custos de contratos de manutenção preventiva.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="final-cta-wrapper section-padding">
+        <div class="container">
+            <div class="cta-overlay-card reveal">
+                <div class="cta-content">
+                    <h2 class="text-white">Pronto para elevar o seu processo?</h2>
+                    <p class="text-white-muted text-lg mt-20 max-width-text">A nossa equipa de engenharia está a postos. Seja para um orçamento detalhado, manutenção preventiva ou uma emergência agora mesmo.</p>
+                    <div class="cta-buttons mt-50">
+                        <a href="https://wa.me/551938167640" target="_blank" class="btn btn-primary shadow-glow w-100-mobile">Falar com Especialista</a>
+                        <a href="equipamentos.html#estoque" class="btn btn-outline-light w-100-mobile">Ver Catálogo de Equipamentos</a>
+                    </div>
+                </div>
+                <div class="cta-decoration">
+                    <div class="circle-dec circle-1"></div>
+                    <div class="circle-dec circle-2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="Separi-logo1.png" alt="Separi Logo" class="footer-logo">
+                    <p>Fornecedora global confiável de peças e manutenção para separadores. A nossa prioridade é o seu processo.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Navegação</h4>
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre Nós</a>
+                    <a href="servicos.html">Serviços</a>
+                    <a href="equipamentos.html#pecas">Peças</a>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Institucional</h4>
+                    <a href="equipamentos.html">Equipamentos</a>
+                    <a href="equipamentos.html#automacao">Automação</a>
+                    <a href="#">Carreiras</a>
+                    <a href="#">Blog</a>
+                </div>
+
+                <div class="footer-contact">
+                    
+                    <p><a href="https://wa.me/551938167640" target="_blank" style="color: var(--teal-dark); font-size: 1.1rem; font-weight: 700;">+55 (19) 3816-7640</a></p>
+                    <p>vendas@separi.com.br</p>
+                    <p style="font-size: 0.9rem;">R. Augusto Poltronieri, 179 - LT - Park Comercial de Indaiatuba, Indaiatuba - SP, 13347-443</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 Separi. Todos os direitos reservados. <span class="footer-credit">Projetado por Guilherme Nicchio 2026</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Separi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar-wrapper">
+        <div class="navbar" id="main-nav">
+            <div class="logo">
+                <a href="index.html"><img src="Separi-logo1.png" alt="Separi Logo"></a>
+            </div>
+            
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html" class="nav-item" style="color: var(--teal-dark);">Home</a>
+                <a href="sobre.html" class="nav-item">Sobre</a>
+                
+                <div class="dropdown">
+                    <div class="nav-item dropdown-toggle">
+                        <a href="servicos.html">Serviços</a>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="caret"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="servicos.html#preventiva">Manutenção Preventiva</a>
+                        <a href="servicos.html#revisao">Revisão Geral</a>
+                        <a href="servicos.html#campo-oficina">Campo & Oficina</a>
+                        <a href="servicos.html#emergencia">Emergência 24/7</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <div class="nav-item dropdown-toggle">
+                        <a href="equipamentos.html#pecas">Peças</a>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="caret"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="equipamentos.html#pecas">Alfa Laval</a>
+                        <a href="equipamentos.html#pecas">GEA Westfalia</a>
+                        <a href="equipamentos.html#pecas">Tetra Pak</a>
+                        <a href="equipamentos.html#pecas">Seital</a>
+                    </div>
+                </div>
+                
+                <div class="dropdown">
+                    <div class="nav-item dropdown-toggle">
+                        <a href="equipamentos.html">Equipamentos</a>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="caret"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="equipamentos.html#recondicionados">Recondicionados</a>
+                        <a href="equipamentos.html#locacao">Locação de Bowls</a>
+                        <a href="equipamentos.html#automacao">Automação</a>
+                    </div>
+                </div>
+
+                <a href="https://wa.me/551938167640" target="_blank" class="btn btn-primary btn-sm mobile-only-btn">Fale Conosco</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="https://wa.me/551938167640" target="_blank" class="btn btn-primary btn-sm desktop-only-btn">Fale Conosco</a>
+            </div>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="parallax-wrapper wrap-a parallax" data-speed="-1.2">
+            <img src="5.jpg" alt="Peça 1" class="floating-img float-1 shadow-deep" style="border-radius: 50%;">
+        </div>
+        <div class="parallax-wrapper wrap-b parallax" data-speed="1.5">
+            <img src="2.png" alt="Peça 2" class="floating-img float-2 shadow-deep blur-sm">
+        </div>
+        <div class="parallax-wrapper wrap-c parallax" data-speed="-1.8">
+            <img src="2.png" alt="Peça 3" class="floating-img float-3 shadow-deep">
+        </div>
+        <div class="parallax-wrapper wrap-d parallax" data-speed="1.2">
+            <img src="6.png" alt="Peça 4" class="floating-img float-4 shadow-deep">
+        </div>
+        <div class="parallax-wrapper wrap-e parallax" data-speed="0.8">
+            <img src="3.png" alt="Peça Decorativa" class="floating-img float-1 shadow-deep blur-sm">
+        </div>
+
+        <div class="container hero-content">
+            <div class="hero-text reveal">
+                <h1>Especialistas em Separadores.</h1>
+                <p>Tudo para centrífugas e separadores industriais e marinhos.</p>
+                <div class="hero-ctas mt-20">
+                    <a href="equipamentos.html" class="btn btn-glass highlight">Equipamentos</a>
+                    <a href="https://wa.me/551938167640" target="_blank" class="btn btn-primary">Quero fazer uma cotação</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="brands-carousel">
+        <div class="container">
+            <p class="carousel-title reveal">Manutenção e peças para as principais marcas globais</p>
+        </div>
+        <div class="carousel-track-container reveal">
+            <div class="carousel-track">
+                <div class="carousel-content">
+                    <div class="brand-item">ALFA LAVAL</div>
+                    <div class="brand-item">GEA WESTFALIA</div>
+                    <div class="brand-item">TETRA PAK</div>
+                    <div class="brand-item">SEITAL</div>
+                </div>
+                <div class="carousel-content">
+                    <div class="brand-item">ALFA LAVAL</div>
+                    <div class="brand-item">GEA WESTFALIA</div>
+                    <div class="brand-item">TETRA PAK</div>
+                    <div class="brand-item">SEITAL</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="section-padding bg-gray-light">
+        <div class="container grid-2 align-center reveal gap-60">
+            <div class="text-block">
+                <h2 class="section-title">Redefinindo a confiabilidade no setor</h2>
+                <p class="text-lg mt-20">Profissionais com experiência e uma compreensão profunda dos sistemas a bordo de embarcações e em plantas industriais.</p>
+                <p class="text-lg mt-20">Oferecemos soluções confiáveis para manter os equipamentos operando com segurança e eficiência em todo o mundo, sempre priorizando o seu processo.</p>
+                <a href="sobre.html" class="btn btn-outline mt-30 w-100-mobile">Conheça a nossa História</a>
+            </div>
+            <div class="about-image-wrapper">
+                <img src="5.jpg" alt="Estrutura Separi" class="about-main-img shadow-deep">
+                <div class="about-decorator"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="valor" class="value-prop section-padding">
+        <div class="value-bg-shape"></div>
+        <div class="container value-container">
+            <div class="value-text reveal text-center">
+                <h2 class="section-title text-white">Uma empresa com a qual pode contar</h2>
+                <p class="text-white-muted mb-50 max-width-text">Somos leais ao seu processo, não ao fabricante do equipamento.</p>
+            </div>
+
+            <div class="bento-grid bento-staggered" id="home-bento">
+                <div class="bento-item bento-large reveal glass-panel card-stagger-1" style="transition-delay: 0.1s;">
+                    <div class="bento-content">
+                        <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg></div>
+                        <h3>Serviço 360º</h3>
+                        <p>Cobertura completa: manutenção e revisão em oficina especializada com os mais altos padrões de engenharia. O seu equipamento entregue como novo.</p>
+                    </div>
+                    <div class="bento-glow"></div>
+                </div>
+
+                <div class="bento-item bento-small-1 reveal glass-panel card-stagger-2" style="transition-delay: 0.2s;">
+                    <div class="bento-content">
+                        <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg></div>
+                        <h3>Peças O.E.M</h3>
+                        <p>Estoque amplo, prontas para entrega imediata.</p>
+                    </div>
+                    <div class="bento-glow"></div>
+                </div>
+
+                <div class="bento-item bento-small-2 reveal glass-panel card-stagger-3" style="transition-delay: 0.3s;">
+                    <div class="bento-content">
+                        <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 140 17 10"></polyline><polyline points="1 20 14 146 7 14"></polyline><path d="M3.51 9a9 9 0 4 5 20.49 15"></path></svg></div>
+                        <h3>Equipamentos</h3>
+                        <p>Centrífugas recondicionadas e automação.</p>
+                    </div>
+                    <div class="bento-glow"></div>
+                </div>
+
+                <div class="bento-item bento-wide reveal glass-panel card-stagger-4" style="transition-delay: 0.4s;">
+                    <div class="bento-content flex-row">
+                        <div class="icon-circle flex-shrink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
+                        <div>
+                            <h3>Suporte 24/7</h3>
+                            <p>Engenharia pronta e disponível a qualquer hora, para emergências críticas. Não deixamos a sua fábrica parar sob nenhuma circunstância.</p>
+                        </div>
+                    </div>
+                    <div class="bento-glow"></div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-50 reveal" style="position: relative; z-index: 2;">
+                <a href="servicos.html" class="btn btn-primary shadow-glow w-100-mobile">Conheça as Nossas Soluções</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="section-padding">
+        <div class="container reveal">
+            <div class="text-center mb-50">
+                <h2 class="section-title">Serviços que Mantêm a Sua Operação</h2>
+                <p class="max-width-text text-lg">Da manutenção preventiva ao atendimento emergencial.</p>
+            </div>
+            <div class="grid-3">
+                <div class="webflow-card border-hover">
+                    <h4>Manutenção Preventiva</h4>
+                    <p>Inspeções regulares e verificações operacionais para evitar paragens indesejadas.</p>
+                </div>
+                <div class="webflow-card border-hover">
+                    <h4>Serviço em Campo & Oficina</h4>
+                    <p>Suporte especializado na sua fábrica ou balanceamento dinâmico na nossa sede.</p>
+                </div>
+                <div class="webflow-card border-hover">
+                    <h4>Emergência 24/7</h4>
+                    <p>Resposta imediata com equipa técnica enviada assim que o pedido é validado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pecas" class="section-padding bg-gray-light">
+        <div class="container grid-2 align-center reveal gap-60">
+            <div class="text-block">
+                <h2 class="section-title">Mais de 10.000 peças O.E.M. prontas.</h2>
+                <p class="text-lg mt-20">Evite a busca desesperada por peças em momentos de falha. Mantemos um stock massivo de componentes de altíssima precisão das principais marcas, garantindo o envio mais rápido da América Latina.</p>
+                <div class="checklist mt-20">
+                    <p>✓ Kits de Serviço e Vedações</p>
+                    <p>✓ Placas e Unidades de Controlo</p>
+                    <p>✓ Bowls e Componentes Estruturais</p>
+                </div>
+                <a href="https://wa.me/551938167640" target="_blank" class="btn btn-outline mt-30 w-100-mobile">Explorar Catálogo</a>
+            </div>
+            <div class="image-block proportion-box border-dark shadow-deep">
+                <div class="placeholder-art">
+                    <img src="caixa.jpg" alt="Peças Separi" width="100%" style="object-fit: cover; height: 100%;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="setores" class="section-padding relative-section" style="overflow: visible;">
+        <div class="bg-layer" style="position: absolute; inset: 0; overflow: hidden; z-index: 0;">
+            <div class="sectors-bg-pattern"></div>
+            <div class="tech-orb tech-orb-1"></div>
+            <div class="tech-orb tech-orb-2"></div>
+        </div>
+
+        <div class="container sectors-sticky-layout relative-z">
+            <div class="sticky-sidebar reveal">
+                <h2 class="section-title">Setores que Movemos</h2>
+                <p class="text-lg">Soluções de alta performance adaptadas para as exigências extremas de cada segmento.</p>
+                <a href="https://wa.me/551938167640" target="_blank" class="btn btn-outline mt-20 hidden-mobile">Falar com Especialista</a>
+            </div>
+
+            <div class="scrolling-content">
+                <div class="sector-list-item scroll-glow-item">
+                    <div class="icon-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 22h20"></path><path d="M12 2v20"></path><path d="M4 22V10l8-8 8 8v12"></path></svg></div>
+                    <div><h4>Laticínios e Alimentos</h4><p>Serviço e suporte rigoroso em higiene para separação.</p></div>
+                </div>
+                <div class="sector-list-item scroll-glow-item">
+                    <div class="icon-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="M12 4v16"></path></svg></div>
+                    <div><h4>Alimentos e Bebidas</h4><p>Soluções de separação para processamento de alimentos.</p></div>
+                </div>
+                <div class="sector-list-item scroll-glow-item">
+                    <div class="icon-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v8"></path><path d="M8 12h8"></path></svg></div>
+                    <div><h4>Sumos e Bebidas</h4><p>Equipamentos e serviços para produção de sumos naturais.</p></div>
+                </div>
+                <div class="sector-list-item scroll-glow-item">
+                    <div class="icon-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h20"></path><path d="M20 12v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8"></path><path d="M4 12V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v6"></path></svg></div>
+                    <div><h4>Cervejarias</h4><p>Separação de alta performance para o setor cervejeiro mundial.</p></div>
+                </div>
+                <div class="sector-list-item scroll-glow-item">
+                    <div class="icon-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></div>
+                    <div><h4>Marinha / Naval</h4><p>Peças imediatas para separadores de navios em rota.</p></div>
+                </div>
+                <div class="sector-list-item scroll-glow-item">
+                    <div class="icon-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect></svg></div>
+                    <div><h4>Biocombustíveis / Biodiesel</h4><p>Centrífugas industriais para produção de biocombustíveis.</p></div>
+                </div>
+                <div class="sector-list-item scroll-glow-item">
+                    <div class="icon-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h20"></path><path d="M2 12h20"></path></svg></div>
+                    <div><h4>Farmácia e Biopharma</h4><p>Soluções para laboratórios e fábricas farmacêuticas.</p></div>
+                </div>
+                <div class="sector-list-item scroll-glow-item">
+                    <div class="icon-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg></div>
+                    <div><h4>Fluidos Industriais</h4><p>Tratamento e separação de fluidos sob condições extremas.</p></div>
+                </div>
+                <div class="sector-list-item scroll-glow-item">
+                    <div class="icon-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></div>
+                    <div><h4>Mineração e Metais</h4><p>Equipamentos robustos estruturados para mineração.</p></div>
+                </div>
+                <div class="sector-list-item scroll-glow-item">
+                    <div class="icon-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2v20"></path></svg></div>
+                    <div><h4>Óleo e Gás</h4><p>Serviços especializados para a indústria de petróleo.</p></div>
+                </div>
+                <div class="sector-list-item scroll-glow-item">
+                    <div class="icon-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></div>
+                    <div><h4>Geração de Energia</h4><p>Suporte técnico a centrífugas em centrais de energia.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="brands-carousel bg-gray-light" style="padding: 80px 0;">
+        <div class="container">
+            <p class="text-center mb-50 reveal max-width-text text-lg">Empresas líderes que confiam na engenharia da Separi.</p>
+        </div>
+        <div class="carousel-track-container reveal">
+            <div class="carousel-track track-clients">
+                <div class="carousel-content">
+                    <div class="client-item">DANONE</div>
+                    <div class="client-item">CACAU SHOW</div>
+                    <div class="client-item">CERVEJARIA ITAICI</div>
+                    <div class="client-item">NAVAL</div>
+                    <div class="client-item">BIOENERGIA</div>
+                </div>
+                <div class="carousel-content">
+                    <div class="client-item">DANONE</div>
+                    <div class="client-item">CACAU SHOW</div>
+                    <div class="client-item">CERVEJARIA ITAICI</div>
+                    <div class="client-item">NAVAL</div>
+                    <div class="client-item">BIOENERGIA</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="video-tour" class="section-padding">
+        <div class="container grid-2 align-center gap-60 reveal">
+            <div class="video-container shadow-deep">
+                <iframe src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="text-block">
+                <h2 class="section-title">Conheça a nossa estrutura e oficina</h2>
+                <p class="text-lg mt-20">Veja de perto o rigor técnico com o qual tratamos cada equipamento. Da desmontagem minuciosa ao balanceamento dinâmico de rotores, a nossa estrutura está pronta para recuperar a sua centrífuga para os exigentes padrões de fábrica.</p>
+                <a href="https://wa.me/551938167640" target="_blank" class="btn btn-primary mt-30 w-100-mobile">Agendar uma Visita</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="final-cta-wrapper section-padding">
+        <div class="container">
+            <div class="cta-overlay-card reveal">
+                <div class="cta-content">
+                    <h2 class="text-white">Pronto para elevar o seu processo?</h2>
+                    <p class="text-white-muted text-lg mt-20 max-width-text">A nossa equipa de engenharia está a postos. Seja para um orçamento detalhado, manutenção preventiva ou uma emergência agora mesmo.</p>
+                    <div class="cta-buttons mt-50">
+                        <a href="https://wa.me/551938167640" target="_blank" class="btn btn-primary shadow-glow w-100-mobile">Falar com Especialista</a>
+                        <a href="equipamentos.html#pecas" class="btn btn-outline-light w-100-mobile">Ver Catálogo de Peças</a>
+                    </div>
+                </div>
+                <div class="cta-decoration">
+                    <div class="circle-dec circle-1"></div>
+                    <div class="circle-dec circle-2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="Separi-logo1.png" alt="Separi Logo" class="footer-logo">
+                    <p>Fornecedora global confiável de peças e manutenção para separadores. A nossa prioridade é o seu processo.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Navegação</h4>
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre Nós</a>
+                    <a href="servicos.html">Serviços</a>
+                    <a href="equipamentos.html">Equipamentos</a>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Institucional</h4>
+                    <a href="equipamentos.html#recondicionados">Equipamentos Usados</a>
+                    <a href="equipamentos.html#automacao">Automação</a>
+                    <a href="#">Carreiras</a>
+                    <a href="#">Blog</a>
+                </div>
+
+                <div class="footer-contact">
+                   
+                    <p><a href="https://wa.me/551938167640" target="_blank" style="color: var(--teal-dark); font-size: 1.1rem; font-weight: 700;">+55 (19) 3816-7640</a></p>
+                    <p>vendas@separi.com.br</p>
+                    <p style="font-size: 0.9rem;">R. Augusto Poltronieri, 179 - LT - Park Comercial de Indaiatuba, Indaiatuba - SP, 13347-443</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 Separi. Todos os direitos reservados. <span class="footer-credit">Projetado por Guilherme Nicchio 2026</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

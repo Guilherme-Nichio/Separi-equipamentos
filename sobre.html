@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Estilo para Desktop: Mantém na grelha, centralizado na coluna da direita */
+        .sobre-particles-col {
+            position: relative;
+            width: 100%;
+            max-width: 550px;
+            aspect-ratio: 1/1;
+            margin: 0 auto;
+            z-index: 5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #particleCanvas {
+            width: 100%;
+            height: 100%;
+            display: block;
+            cursor: crosshair;
+        }
+
+        /* Estilo para Telemóvel: Arranca da grelha e atira para trás do texto como fundo */
+        @media (max-width: 768px) {
+            .sobre-particles-col {
+                position: absolute !important;
+                top: -50px; left: 0; right: 0; bottom: 0;
+                width: 100% !important;
+                height: 100% !important;
+                max-width: 100% !important;
+                aspect-ratio: auto !important;
+                z-index: 0 !important;
+                opacity: 0.3; /* Mais transparente para não prejudicar a leitura */
+                pointer-events: none; /* Deixa os cliques passarem direto para os botões */
+            }
+            .hero-internal-text {
+                position: relative;
+                z-index: 10 !important; /* Garante o texto na frente */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar-wrapper">
+        <div class="navbar" id="main-nav">
+            <div class="logo">
+                <a href="index.html"><img src="Separi-logo1.png" alt="Separi Logo"></a>
+            </div>
+            
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="sobre.html" class="nav-item" style="color: var(--teal-dark);">Sobre</a>
+                
+                <div class="dropdown">
+                    <div class="nav-item dropdown-toggle">
+                        <a href="servicos.html">Serviços</a>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="caret"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="servicos.html#preventiva">Manutenção Preventiva</a>
+                        <a href="servicos.html#revisao">Revisão Geral</a>
+                        <a href="servicos.html#campo-oficina">Campo & Oficina</a>
+                        <a href="servicos.html#emergencia">Emergência 24/7</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <div class="nav-item dropdown-toggle">
+                        <a href="equipamentos.html#pecas">Peças</a>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="caret"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="equipamentos.html#pecas">Alfa Laval</a>
+                        <a href="equipamentos.html#pecas">GEA Westfalia</a>
+                        <a href="equipamentos.html#pecas">Tetra Pak</a>
+                        <a href="equipamentos.html#pecas">Seital</a>
+                    </div>
+                </div>
+                
+                <div class="dropdown">
+                    <div class="nav-item dropdown-toggle">
+                        <a href="equipamentos.html">Equipamentos</a>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="caret"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="equipamentos.html#recondicionados">Recondicionados</a>
+                        <a href="equipamentos.html#locacao">Locação de Bowls</a>
+                        <a href="equipamentos.html#automacao">Automação</a>
+                    </div>
+                </div>
+
+                <a href="https://wa.me/551938167640" target="_blank" class="btn btn-primary btn-sm mobile-only-btn">Fale Connosco</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="https://wa.me/551938167640" target="_blank" class="btn btn-primary btn-sm desktop-only-btn">Fale Connosco</a>
+            </div>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-internal-dark relative-section" style="overflow: hidden;">
+        <div class="sectors-bg-pattern" style="opacity: 0.05;"></div>
+        <div class="tech-orb tech-orb-1" style="background: var(--teal-light); opacity: 0.15; width: 500px; height: 500px; top: -100px; left: -100px;"></div>
+
+        <div class="container grid-2 align-center relative-z" style="position: relative; z-index: 10;">
+            
+            <div class="hero-internal-text reveal text-left-desktop">
+                <div class="breadcrumbs mb-20">
+                    <a href="index.html">Home</a> <span class="separator">/</span> <span class="current">Sobre Nós</span>
+                </div>
+                <h1 class="text-white">Redefinindo a <br><span class="text-gradient">confiabilidade</span><br>no setor.</h1>
+                <p class="text-white-muted text-lg mt-20 mb-30 max-width-text-left">Compreensão profunda dos sistemas a bordo de embarcações e em fábricas. Oferecemos soluções confiáveis para manter os equipamentos a operar com segurança e eficiência em todo o mundo.</p>
+                <div class="hero-ctas justify-start">
+                    <a href="#historia" class="btn btn-primary shadow-glow w-100-mobile">Conheça a Nossa História</a>
+                </div>
+            </div>
+            
+            <div class="sobre-particles-col reveal" style="transition-delay: 0.2s;">
+                <canvas id="particleCanvas"></canvas>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section-padding bg-white">
+        <div class="container reveal text-center">
+        
+            <h2 class="section-title max-width-text" style="margin: 0 auto 30px;">Muito mais do que um fornecedor. O seu parceiro técnico global.</h2>
+            <p class="text-lg max-width-text">Fundada em 2018, a Separi cresceu para se tornar um fornecedor global confiável de peças de alta qualidade e componentes recondicionados para separadores marinhos e industriais.</p>
+            <p class="text-lg max-width-text mt-20">Valorizamos o contacto pessoal e a expertise técnica. Por isso, todos os nossos engenheiros e representantes estão sempre disponíveis e prontos para manter a sua operação a girar sem interrupções.</p>
+        </div>
+    </section>
+
+    <section class="section-padding bg-gray-light relative-section">
+        <div class="container reveal text-center mb-50">
+            <h2 class="section-title">O que nos move</h2>
+            <p class="text-lg max-width-text">Os princípios que garantem a excelência na Separi todos os dias.</p>
+        </div>
+
+        <div class="container">
+            <div class="bento-grid" id="sobre-bento">
+                <div class="bento-item bento-small-1 reveal webflow-card border-hover" style="transition-delay: 0.1s; background: var(--white);">
+                    <div class="icon-circle mb-20" style="background: rgba(0, 169, 157, 0.1); color: var(--teal-dark); border: none;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                    </div>
+                    <h3 class="mb-20" style="color: var(--grey-dark); font-size: 1.5rem;">A Nossa Missão</h3>
+                    <p class="text-lg">Fornecer soluções completas em serviço, peças e equipamentos para centrífugas, garantindo máxima eficiência, segurança e produtividade.</p>
+                </div>
+
+                <div class="bento-item bento-small-2 reveal webflow-card border-hover" style="transition-delay: 0.2s; background: var(--white);">
+                    <div class="icon-circle mb-20" style="background: rgba(0, 169, 157, 0.1); color: var(--teal-dark); border: none;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                    </div>
+                    <h3 class="mb-20" style="color: var(--grey-dark); font-size: 1.5rem;">A Nossa Visão</h3>
+                    <p class="text-lg">Ser a empresa de referência em serviço e peças no Brasil e no mundo, reconhecida pela excelência técnica e confiabilidade absoluta.</p>
+                </div>
+
+                <div class="bento-item bento-wide reveal webflow-card border-hover" style="transition-delay: 0.3s; background: var(--teal-dark);">
+                    <div class="tech-orb tech-orb-2" style="width: 200px; height: 200px; right: -50px; bottom: -50px; opacity: 0.2;"></div>
+                    <h3 class="mb-30 text-white" style="font-size: 1.5rem; position: relative; z-index: 2;">Os Nossos Valores</h3>
+                    <div class="values-flex-wrap" style="position: relative; z-index: 2;">
+                        <div class="value-pill">
+                            <strong>Atendimento</strong> <br>O cliente sempre em primeiro lugar.
+                        </div>
+                        <div class="value-pill">
+                            <strong>Respeito</strong> <br>Relações transparentes e éticas.
+                        </div>
+                        <div class="value-pill">
+                            <strong>Melhoria</strong> <br>Sempre à procura de fazer melhor.
+                        </div>
+                        <div class="value-pill">
+                            <strong>Integridade</strong> <br>Agimos com honestidade em tudo.
+                        </div>
+                        <div class="value-pill">
+                            <strong>Confiança</strong> <br>Construída com resultados.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="historia" class="section-padding" style="position: relative;">
+        <div class="bg-layer" style="position: absolute; inset: 0; overflow: hidden; z-index: 0;"><div class="sectors-bg-pattern"></div></div>
+        <div class="container sectors-sticky-layout relative-z">
+            
+            <div class="sticky-sidebar reveal">
+               
+                <h2 class="section-title">A Nossa Evolução</h2>
+                <p class="text-lg">De uma empresa local para um parceiro de serviços com atuação internacional. Crescemos impulsionados pela inovação.</p>
+            </div>
+
+            <div class="scrolling-content">
+                <div class="sector-list-item scroll-glow-item">
+                    <div class="timeline-year">2018</div>
+                    <div>
+                        <h4 style="font-size: 1.4rem;">Fundação da Separi</h4>
+                        <p class="text-lg">A Separi foi fundada como uma empresa focada em serviço de alta qualidade para separadores e suporte técnico para a indústria naval e industrial.</p>
+                    </div>
+                </div>
+
+                <div class="sector-list-item scroll-glow-item">
+                    <div class="timeline-year">2020</div>
+                    <div>
+                        <h4 style="font-size: 1.4rem;">Expansão de Serviços</h4>
+                        <p class="text-lg">Abertura de novos segmentos de atuação e expansão da nossa oficina, ampliando o atendimento para indústrias de laticínios, cervejarias e óleo/gás.</p>
+                    </div>
+                </div>
+
+                <div class="sector-list-item scroll-glow-item">
+                    <div class="timeline-year">2023</div>
+                    <div>
+                        <h4 style="font-size: 1.4rem;">Sede Tecnológica em Indaiatuba</h4>
+                        <p class="text-lg">Mudança para uma estrutura moderna e totalmente equipada, permitindo serviços avançados como balanceamento dinâmico de rotores num só lugar.</p>
+                    </div>
+                </div>
+
+                <div class="sector-list-item scroll-glow-item">
+                    <div class="timeline-year">Hoje</div>
+                    <div>
+                        <h4 style="font-size: 1.4rem;">Atuação Global & Inovação</h4>
+                        <p class="text-lg">Consolidação do envio internacional de peças de alta precisão e planeamento para a fabricação e venda de equipamentos proprietários Separi.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding bg-gray-light">
+        <div class="container text-center mb-50 reveal">
+            <h2 class="section-title">Conheça a nossa Equipa</h2>
+            <p class="text-lg max-width-text">Engenheiros e técnicos altamente qualificados, dedicados a manter a sua operação a girar.</p>
+        </div>
+        
+        <div class="container reveal">
+            <div class="grid-3">
+                <div class="team-card webflow-card border-hover" style="padding: 20px;">
+                    <div class="team-photo" style="background-image: url('https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="team-info text-center mt-20">
+                        <h4 class="mb-0">Direção</h4>
+                        <p class="text-teal-dark font-semibold" style="margin-bottom: 0;">Fundadores</p>
+                    </div>
+                </div>
+                <div class="team-card webflow-card border-hover" style="padding: 20px;">
+                    <div class="team-photo" style="background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="team-info text-center mt-20">
+                        <h4 class="mb-0">Engenharia</h4>
+                        <p class="text-teal-dark font-semibold" style="margin-bottom: 0;">Técnicos Certificados</p>
+                    </div>
+                </div>
+                <div class="team-card webflow-card border-hover" style="padding: 20px;">
+                    <div class="team-photo" style="background-image: url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="team-info text-center mt-20">
+                        <h4 class="mb-0">Atendimento</h4>
+                        <p class="text-teal-dark font-semibold" style="margin-bottom: 0;">Suporte 24/7</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding bg-white">
+        <div class="container grid-2 align-center reveal gap-60">
+            <div class="text-block">
+                <div class="badge-outline mb-20">A Nossa Sede</div>
+                <h2 class="section-title">Localização Estratégica</h2>
+                <p class="text-lg mt-20 mb-30">A Separi está localizada em Indaiatuba, São Paulo. A nossa posição privilegiada garante tempos de resposta rápidos para emergências e facilita a logística ágil de peças e equipamentos para toda a América Latina.</p>
+                <div class="checklist">
+                    <p><svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> <strong>R. Augusto Poltronieri, 179 - LT - Park Comercial de Indaiatuba, Indaiatuba - SP, 13347-443</strong></p>
+                    <p><svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> <strong><a href="https://wa.me/551938167640" target="_blank" style="color: inherit;">+55 (19) 3816-7640</a></strong></p>
+                    <p><svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> <strong>vendas@separi.com.br</strong></p>
+                </div>
+            </div>
+            <div class="image-block proportion-box border-dark shadow-deep" style="aspect-ratio: 1/1;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3663.785002018803!2d-47.2140685!3d-23.1414437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8b3558832eb17%3A0xa1ea0eec405a3063!2sR.%20Augusto%20Poltronieri%2C%20179%20-%20Park%20Comercial%20de%20Indaiatuba%2C%20Indaiatuba%20-%20SP%2C%2013347-443!5e0!3m2!1spt-BR!2sbr!4v1715632420387!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="final-cta-wrapper section-padding">
+        <div class="container">
+            <div class="cta-overlay-card reveal">
+                <div class="cta-content">
+                    <h2 class="text-white">Pronto para elevar o seu processo?</h2>
+                    <p class="text-white-muted text-lg mt-20 max-width-text">A nossa equipa de engenharia está a postos. Seja para um orçamento detalhado, manutenção preventiva ou uma emergência agora mesmo.</p>
+                    <div class="cta-buttons mt-50">
+                        <a href="https://wa.me/551938167640" target="_blank" class="btn btn-primary shadow-glow w-100-mobile">Falar com Especialista</a>
+                        <a href="equipamentos.html#pecas" class="btn btn-outline-light w-100-mobile">Ver Catálogo de Peças</a>
+                    </div>
+                </div>
+                <div class="cta-decoration">
+                    <div class="circle-dec circle-1"></div>
+                    <div class="circle-dec circle-2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="Separi-logo1.png" alt="Separi Logo" class="footer-logo">
+                    <p>Fornecedora global confiável de peças e manutenção para separadores. A nossa prioridade é o seu processo.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Navegação</h4>
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre Nós</a>
+                    <a href="servicos.html">Serviços</a>
+                    <a href="equipamentos.html#pecas">Peças</a>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Institucional</h4>
+                    <a href="equipamentos.html">Equipamentos Usados</a>
+                    <a href="equipamentos.html#automacao">Automação</a>
+                    <a href="#">Carreiras</a>
+                    <a href="#">Blog</a>
+                </div>
+
+                <div class="footer-contact">
+                  
+                    <p><a href="https://wa.me/551938167640" target="_blank" style="color: var(--teal-dark); font-size: 1.1rem; font-weight: 700;">+55 (19) 3816-7640</a></p>
+                    <p>vendas@separi.com.br</p>
+                    <p style="font-size: 0.9rem;">R. Augusto Poltronieri, 179 - LT - Park Comercial de Indaiatuba, Indaiatuba - SP, 13347-443</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 Separi. Todos os direitos reservados. <span class="footer-credit">Projetado por Guilherme Nicchio 2026</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

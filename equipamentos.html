@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipamentos </title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar-wrapper">
+        <div class="navbar" id="main-nav">
+            <div class="logo">
+                <a href="index.html"><img src="Separi-logo1.png" alt="Separi Logo"></a>
+            </div>
+            
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="sobre.html" class="nav-item">Sobre</a>
+                
+                <div class="dropdown">
+                    <div class="nav-item dropdown-toggle">
+                        <a href="servicos.html">Serviços</a>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="caret"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="servicos.html#preventiva">Manutenção Preventiva</a>
+                        <a href="servicos.html#revisao">Revisão Geral</a>
+                        <a href="servicos.html#campo-oficina">Campo & Oficina</a>
+                        <a href="servicos.html#emergencia">Emergência 24/7</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <div class="nav-item dropdown-toggle">
+                        <a href="equipamentos.html#pecas">Peças</a>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="caret"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="equipamentos.html#pecas">Alfa Laval</a>
+                        <a href="equipamentos.html#pecas">GEA Westfalia</a>
+                        <a href="equipamentos.html#pecas">Tetra Pak</a>
+                        <a href="equipamentos.html#pecas">Seital</a>
+                    </div>
+                </div>
+                
+                <div class="dropdown">
+                    <div class="nav-item dropdown-toggle" style="color: var(--teal-dark);">
+                        <a href="equipamentos.html">Equipamentos</a>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="caret"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="equipamentos.html#recondicionados">Recondicionados</a>
+                        <a href="equipamentos.html#locacao">Locação de Bowls</a>
+                        <a href="equipamentos.html#automacao">Automação</a>
+                    </div>
+                </div>
+
+                <a href="https://wa.me/551938167640" target="_blank" class="btn btn-primary btn-sm mobile-only-btn">Fale Connosco</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="https://wa.me/551938167640" target="_blank" class="btn btn-primary btn-sm desktop-only-btn">Fale Connosco</a>
+            </div>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-internal-dark relative-section" style="overflow: hidden;">
+        <div class="sectors-bg-pattern" style="opacity: 0.05;"></div>
+        
+        <div class="tech-orb tech-orb-1" style="background: rgba(255,255,255,0.1); width: 600px; height: 600px; top: -200px; right: -100px;"></div>
+        <div class="tech-orb tech-orb-2" style="background: var(--teal-dark); opacity: 0.4; width: 400px; height: 400px; bottom: -100px; left: -100px;"></div>
+        
+        <div class="parallax-wrapper equip-wrap-a parallax" data-speed="-1" style="z-index: 1;">
+            <img src="1.png" alt="Rotor" class="floating-img float-1 shadow-deep" style="border-radius: 50%;">
+        </div>
+        <div class="parallax-wrapper equip-wrap-b parallax" data-speed="1.2" style="z-index: 1;">
+            <img src="3.png" alt="Peça Interna" class="floating-img float-2 shadow-deep blur-sm" style="border-radius: var(--radius-lg);">
+        </div>
+        
+        <div class="container grid-2 align-center relative-z" style="z-index: 10; position: relative;">
+            <div class="hero-internal-text reveal text-left-desktop">
+                <div class="breadcrumbs mb-20">
+                    <a href="index.html">Home</a> <span class="separator">/</span> <span class="current">Equipamentos</span>
+                </div>
+                <h1 class="text-white">Separe de forma <span class="text-gradient">inteligente</span>, não mais difícil.</h1>
+                <p class="text-white-muted text-lg mt-20 mb-30 max-width-text-left">Soluções completas para otimizar o seu processo: centrífugas totalmente recondicionadas, programa de locação de rotores (bowls) para zero tempo de inatividade e painéis de automação de última geração.</p>
+                <div class="hero-ctas justify-start">
+                    <a href="#estoque" class="btn btn-primary shadow-glow w-100-mobile">Ver Equipamentos Disponíveis</a>
+                </div>
+            </div>
+            
+            <div class="desktop-only-btn" style="height: 400px; width: 100%;"></div>
+        </div>
+    </section>
+
+    <section id="recondicionados" class="section-padding bg-white">
+        <div class="container reveal text-center mb-50">
+
+            <h2 class="section-title max-width-text" style="margin: 0 auto;">Adicione anos de produtividade à sua centrífuga.</h2>
+            <p class="text-lg max-width-text mt-20">O que é uma centrífuga recondicionada? É basicamente um equipamento usado, certo? <strong>Não exatamente.</strong> Uma centrífuga recondicionada pela Separi está muito mais próxima de uma máquina nova. Cada parafuso, disco, mola, válvula e componente do chassi é exaustivamente inspecionado e renovado.</p>
+        </div>
+
+        <div class="container reveal">
+            <div class="table-responsive-wrapper shadow-deep">
+                <div class="table-responsive">
+                    <table class="comparison-table equip-table text-left">
+                        <thead>
+                            <tr>
+                                <th class="sticky-col header-corner" style="width: 40%;">Processo de Recondicionamento</th>
+                                <th class="bg-teal-header text-center" style="width: 30%;">Recondicionado Separi <br><span class="table-sub" style="color: rgba(255,255,255,0.8);">Como Novo</span></th>
+                                <th class="text-center" style="width: 30%;">Usado / Revisado <br><span class="table-sub">Padrão de Mercado</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table-section-header">
+                                
+                            </tr>
+                            <tr>
+                                <td class="sticky-col">Limpeza Química e Teste de Penetração de Corante (Trincas)</td>
+                                <td class="text-center"><svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg></td>
+                                <td class="text-center"><span class="icon-dash">-</span></td>
+                            </tr>
+                            <tr>
+                                <td class="sticky-col">Inspeção de Erosão, Lock Ring e Desgaste de Roscas</td>
+                                <td class="text-center"><svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg></td>
+                                <td class="text-center"><svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg></td>
+                            </tr>
+                            <tr>
+                                <td class="sticky-col">Verificação de Tolerâncias, Altura e Condição dos Discos</td>
+                                <td class="text-center"><svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg></td>
+                                <td class="text-center"><span class="icon-dash">-</span></td>
+                            </tr>
+                            <tr>
+                                <td class="sticky-col">Polimento, Refinamento e Novas Gaxetas do Bowl</td>
+                                <td class="text-center"><svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg></td>
+                                <td class="text-center"><svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg></td>
+                            </tr>
+                            <tr>
+                                <td class="sticky-col">Balanceamento Dinâmico Computadorizado do Bowl</td>
+                                <td class="text-center"><svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg></td>
+                                <td class="text-center"><span class="icon-dash">-</span></td>
+                            </tr>
+                            
+                            <tr class="table-section-header">
+                          
+                            </tr>
+                            <tr>
+                                <td class="sticky-col">Remoção de Controles Antigos e Limpeza Completa do Chassi</td>
+                                <td class="text-center"><svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg></td>
+                                <td class="text-center"><svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg></td>
+                            </tr>
+                            <tr>
+                                <td class="sticky-col">Jateamento de Areia, Pintura Externa e Carcaça Interna</td>
+                                <td class="text-center"><svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg></td>
+                                <td class="text-center"><span class="icon-dash">-</span></td>
+                            </tr>
+                            <tr>
+                                <td class="sticky-col">Reconstrução da Embreagem e Bombas Centrípetas</td>
+                                <td class="text-center"><svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg></td>
+                                <td class="text-center"><span class="icon-dash">-</span></td>
+                            </tr>
+                            <tr>
+                                <td class="sticky-col">Motor Retificado com Rolamentos Novos e Pintura Fresca</td>
+                                <td class="text-center"><svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg></td>
+                                <td class="text-center"><span class="icon-dash">-</span></td>
+                            </tr>
+                            <tr>
+                                <td class="sticky-col">Novos Rolamentos do Chassi, Eixos de Transmissão e Selos</td>
+                                <td class="text-center"><svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg></td>
+                                <td class="text-center"><svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg></td>
+                            </tr>
+                            <tr>
+                                <td class="sticky-col">Novo Painel de Controle Integrado e Calibração de Água/Produto</td>
+                                <td class="text-center"><svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg></td>
+                                <td class="text-center"><span class="icon-dash">-</span></td>
+                            </tr>
+                            <tr>
+                                <td class="sticky-col">Teste Contínuo (Run-in) de 8 a 10 horas antes do Envio</td>
+                                <td class="text-center"><svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg></td>
+                                <td class="text-center"><span class="icon-dash">-</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="text-center mt-30">
+                <p class="text-lg"><strong>A funcionalidade e garantia de um OEM, por uma fração do preço.</strong> As nossas máquinas recondicionadas são opções excelentes tanto como centrífugas primárias quanto equipamentos de backup.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="locacao" class="section-padding bg-gray-light">
+        <div class="container grid-2 align-center reveal gap-60">
+            <div class="text-block equip-text-spacing">
+                
+                <h2 class="section-title">Locação de Rotores (Bowls)</h2>
+                <p class="text-lg mt-20">O que acontece quando o seu rotor está desbalanceado ou precisa de uma reparação extensa? Um rotor desbalanceado é uma receita para o desastre, prejudicando o volume de produção e criando riscos de segurança.</p>
+                <p class="text-lg mt-20 mb-30">Não pare a sua produção. O nosso programa de locação mantém o seu equipamento operacional. A nossa equipa substitui o seu rotor por um rotor de locação numa única visita. Enquanto a sua fábrica continua a operar normalmente, levamos o seu rotor para a nossa oficina, reparamos aos padrões OEM e, quando estiver pronto, fazemos a troca final.</p>
+                <a href="https://wa.me/551938167640" target="_blank" class="btn btn-outline mt-30 hidden-mobile">Consultar Disponibilidade</a>
+            </div>
+
+            <div>
+                <h3 class="mb-20 text-grey-dark text-center">Rotores e Bowls Disponíveis para Troca</h3>
+                <div class="table-responsive-wrapper shadow-deep">
+                    <div class="table-responsive" style="max-height: 400px; overflow-y: auto;">
+                        <table class="comparison-table equip-table text-left">
+                            <thead style="position: sticky; top: 0; z-index: 10;">
+                                <tr>
+                                    <th class="bg-teal-header" style="width: 45%;">Centrífugas Aplicáveis</th>
+                                    <th class="bg-teal-header" style="width: 55%;">Configuração do Disco / Aplicação</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td class="font-semibold">B525, 525 H/M, 510 C/M</td><td>Sangue, Leite Quente/Frio</td></tr>
+                                <tr><td class="font-semibold">BRPX 213, AFPX 213, MRPX 213</td><td>Clarificador, Industrial, Leite Quente</td></tr>
+                                <tr><td class="font-semibold">518, 618, 718</td><td>Soro, Leite Quente/Frio</td></tr>
+                                <tr><td class="font-semibold">MRPX 214 / 314 TGV-74</td><td>Leite Quente, Soro</td></tr>
+                                <tr><td class="font-semibold">MRPX 318 / 418 TGV</td><td>Soro, Leite Quente</td></tr>
+                                <tr><td class="font-semibold">MRPX 414 / 514 HGV</td><td>Leite Quente</td></tr>
+                                <tr><td class="font-semibold">SAMM 12006, MSA 100</td><td>Separador (Waster), Soro</td></tr>
+                                <tr><td class="font-semibold">SAMM 20006, MSA 160</td><td>Separador (Waster / Saver)</td></tr>
+                                <tr><td class="font-semibold">MSD 300, MSE 300</td><td>Leite Quente, Clarificador de Soro</td></tr>
+                                <tr><td class="font-semibold">SAMM 25006, MSA 200-01</td><td>Leite Quente, Soro</td></tr>
+                                <tr><td class="font-semibold">SAMR-15037, SA45-06</td><td>Clarificador Industrial</td></tr>
+                                <tr><td class="font-semibold">MSE 500-01-777</td><td>Leite Quente</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="text-center mt-30 show-mobile-only" style="width: 100%;">
+                    <a href="https://wa.me/551938167640" target="_blank" class="btn btn-outline w-100-mobile">Consultar Disponibilidade</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="automacao" class="section-padding bg-white">
+        <div class="container reveal text-center mb-50">
+            <h2 class="section-title">Automação e Controlos</h2>
+            <p class="text-lg max-width-text">Atualize a tecnologia da sua centrífuga. Painéis modernos e Drives de Frequência Variável (VFDs) para operar corretamente qualquer equipamento Alfa Laval, Tetra Pak ou Westfalia.</p>
+        </div>
+        
+        <div class="container interactive-split-container reveal">
+            <div class="split-panel panel-light">
+                <div class="panel-content">
+                    <div class="icon-circle mb-20" style="background: rgba(0, 169, 157, 0.1); color: var(--teal-dark); border: none;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                    </div>
+                    <h3 class="mb-20">Drives de Frequência Variável (VFD)</h3>
+                    <p class="mb-30 text-lg">Fornecemos inversores de frequência Allen Bradley pré-programados em qualquer gama de potência requerida para a sua aplicação.</p>
+                    <ul class="detailed-list">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Aceleração de arranque suave</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Redução dramática do consumo de corrente</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Aumento extremo da vida útil do motor</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="split-panel panel-dark">
+                <div class="tech-orb tech-orb-2" style="width: 300px; height: 300px; right: -50px; bottom: -50px; opacity: 0.4;"></div>
+                <div class="panel-content relative-z">
+                    <div class="icon-circle mb-20" style="background: rgba(255, 255, 255, 0.1); color: var(--white); border: 1px solid rgba(255,255,255,0.2);">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
+                    </div>
+                    <h3 class="mb-20 text-white">Painéis de Controlo (CLP/IHM)</h3>
+                    <p class="mb-30 text-lg" style="color: rgba(255,255,255,0.7);">Projetamos painéis modernos que otimizam a automação e oferecem integração completa com a fábrica, acabando com as falhas de quadros desatualizados.</p>
+                    <ul class="detailed-list text-white">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Monitorização e Diagnóstico Remoto</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Interface Touch (IHM) intuitiva</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Integração com sistemas SCADA da fábrica</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="estoque" class="section-padding bg-gray-light">
+        <div class="container reveal text-center mb-50">
+         
+            <h2 class="section-title max-width-text" style="margin: 0 auto;">Equipamentos Disponíveis</h2>
+            <p class="text-lg max-width-text mt-20">O nosso Programa de Entrega Rápida foi criado para minimizar o tempo de inatividade. Equipamentos perfeitos para substituição sem interromper as suas estruturas atuais.</p>
+        </div>
+
+        <div class="container">
+            <div class="grid-3">
+                <div class="equip-card reveal">
+                    <div class="equip-badge">Novidade</div>
+                    <div class="equip-img-box">
+                        <img src="Alfa Laval CH700.png" alt="ALFA LAVAL CH700" style="width: auto; height: 100%;">
+                    </div>
+                    <div class="equip-content">
+                        <h3>Alfa Laval CH700</h3>
+                        <p class="text-teal-dark font-semibold" style="font-size: 0.9rem; margin-top: -10px;">(Série #4205389)</p>
+                        <p>Clarificador Industrial Auto-Limpante de Alta Capacidade. Nova, nunca foi operada.</p>
+                        <a href="https://wa.me/551938167640" target="_blank" class="btn btn-outline-light mt-20" style="color: var(--teal-dark); border-color: var(--teal-light); width: 100%;">Solicitar Cotação</a>
+                    </div>
+                </div>
+
+                <div class="equip-card reveal" style="transition-delay: 0.1s;">
+                    <div class="equip-badge" style="background: var(--grey-dark);">Recondicionada</div>
+                    <div class="equip-img-box">
+                        <img src="HMRPX 714 HGV.png" alt="HMRPX 714 HGV" style="width: auto; height: 80%;">
+                    </div>
+                    <div class="equip-content">
+                        <h3>HMRPX 714 HGV</h3>
+                        <p class="text-teal-dark font-semibold" style="font-size: 0.9rem; margin-top: -10px;">(Série #4021550)</p>
+                        <p>Separador Auto-Limpante. Alta Eficiência de Desnatação e Qualidade Consistente de Creme.</p>
+                        <a href="https://wa.me/551938167640" target="_blank" class="btn btn-outline-light mt-20" style="color: var(--teal-dark); border-color: var(--teal-light); width: 100%;">Solicitar Cotação</a>
+                    </div>
+                </div>
+
+                <div class="equip-card reveal" style="transition-delay: 0.2s;">
+                    <div class="equip-badge" style="background: var(--grey-dark);">Recondicionada</div>
+                    <div class="equip-img-box">
+                        <img src="DMRPX 618 HGV.png" alt="DMRPX 618 HGV" style="width: auto; height: 100%;">
+                    </div>
+                    <div class="equip-content">
+                        <h3>DMRPX 618 HGV</h3>
+                        <p class="text-teal-dark font-semibold" style="font-size: 0.9rem; margin-top: -10px;">(Série #4081307)</p>
+                        <p>Clarificador Hermético Auto-Limpante de Alta Capacidade. Reconstruído aos padrões OEM.</p>
+                        <a href="https://wa.me/551938167640" target="_blank" class="btn btn-outline-light mt-20" style="color: var(--teal-dark); border-color: var(--teal-light); width: 100%;">Solicitar Cotação</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-30">
+                <p class="text-text-light">Temos muito mais equipamentos em stock, incluindo modelos <strong>MSE 300, MSB 200</strong>, entre outros. Contacte-nos para consultar a disponibilidade atualizada.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="pecas" class="banner-compra relative-section">
+        <div class="parallax-bg"></div>
+        <div class="overlay-escuro"></div>
+        
+        <div class="container relative-z reveal text-center" style="padding: 100px 0;">
+ 
+            <h2 class="section-title text-white max-width-text" style="margin: 0 auto;">Compramos o seu equipamento usado.</h2>
+            <p class="text-white-muted text-lg mt-20 mb-30 max-width-text">Tem centrífugas ou separadores (Alfa Laval, Westfalia, Tetra Pak) parados ou que já não estão em uso na sua fábrica? A Separi adquire máquinas usadas para o nosso programa de recondicionamento. Entre em contato para uma avaliação gratuita.</p>
+            <a href="https://wa.me/551938167640" target="_blank" class="btn btn-primary shadow-glow w-100-mobile">Solicitar Avaliação de Equipamento</a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="Separi-logo1.png" alt="Separi Logo" class="footer-logo">
+                    <p>Fornecedora global confiável de peças e manutenção para separadores. A nossa prioridade é o seu processo.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Navegação</h4>
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre Nós</a>
+                    <a href="servicos.html">Serviços</a>
+                    <a href="equipamentos.html#pecas">Peças</a>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Institucional</h4>
+                    <a href="equipamentos.html">Equipamentos</a>
+                    <a href="equipamentos.html#automacao">Automação</a>
+                    <a href="#">Carreiras</a>
+                    <a href="#">Blog</a>
+                </div>
+
+                <div class="footer-contact">
+               
+                    <p><a href="https://wa.me/551938167640" target="_blank" style="color: var(--teal-dark); font-size: 1.1rem; font-weight: 700;">+55 (19) 3816-7640</a></p>
+                    <p>vendas@separi.com.br</p>
+                    <p style="font-size: 0.9rem;">R. Augusto Poltronieri, 179 - LT - Park Comercial de Indaiatuba, Indaiatuba - SP, 13347-443</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 Separi. Todos os direitos reservados. <span class="footer-credit">Projetado por Guilherme Nicchio 2026</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
